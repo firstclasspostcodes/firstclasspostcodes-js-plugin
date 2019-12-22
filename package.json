@@ -1,0 +1,63 @@
+{
+  "name": "@firstclasspostcodes/firstclasspostcodes-js-plugin",
+  "description": "",
+  "homepage": "https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin",
+  "author": "Firstclasspostcodes <support@firstclasspostcodes.com> (https://firstclasspostcodes.com/)",
+  "keywords": [
+    "postcodes",
+    "postcode lookup",
+    "firstclasspostcodes",
+    "api"
+  ],
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "browser": "lib/index.js",
+  "scripts": {
+    "commit": "npx git-cz",
+    "build": "parcel build lib/index.js --target browser",
+    "lint": "eslint '**/*.{js,svelte}'",
+    "test": "NODE_ENV=test jest **/*.test.js --coverage",
+    "cypress": "cypress run --headless",
+    "start": "parcel index.html",
+    "postinstall": "cp .browserslistrc.svelte node_modules/svelte/.browserslistrc"
+  },
+  "targets": {
+    "browser": {
+      "includeNodeModules": true,
+      "engines": {
+        "browsers": [
+          "> 1%",
+          "not dead"
+        ]
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "babel-jest": "^24.9.0",
+    "cypress": "^3.8.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-cypress": "^2.8.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "git-cz": "^3.3.0",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svelte": "^4.0.5",
+    "svelte": "^3.16.5",
+    "svelte-jest": "^0.3.1"
+  },
+  "dependencies": {}
+}
