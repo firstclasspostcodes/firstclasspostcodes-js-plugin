@@ -52,7 +52,7 @@
     "eslint-plugin-cypress": "^2.8.1",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-svelte3": "^2.7.3",
-    "git-cz": "^3.3.0",
+    "git-cz": "^4.0.0",
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.5",
