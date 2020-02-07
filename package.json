@@ -55,7 +55,7 @@
     "git-cz": "^4.2.0",
     "jest": "^25.1.0",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-svelte": "^4.0.5",
+    "parcel-plugin-svelte": "^4.0.6",
     "svelte": "^3.18.1",
     "svelte-jest": "^0.3.1"
   },
