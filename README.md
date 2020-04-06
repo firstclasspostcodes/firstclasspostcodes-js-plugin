@@ -10,10 +10,8 @@ See [@firstclasspostcodes/plugin](https://docs.firstclasspostcodes.com/js/plugin
 Add the plugin directly into your HTML with:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/plugin/VERSION.js"></script>
+<script src="https://js.firstclasspostcodes.com/plugin/__VERSION__.js"></script>
 ```
-
-Where `VERSION` is the desired version of the library, for example `v0.2.1`. 
 
 **Note on older browsers:** You will need to use a polyfill service, the following example covers all of the required language features:
 
@@ -25,10 +23,10 @@ Where `VERSION` is the desired version of the library, for example `v0.2.1`.
 We do not bundle the client library with the plugin, so you will need to add a separate script tag to require the JS client:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/CLIENT_VERSION.js"></script>
+<script src="https://js.firstclasspostcodes.com/v1.5.1.js"></script>
 ```
 
-Where `CLIENT_VERSION` is the name of _any_ version on the [@firstclasspostcodes/js](https://github.com/firstclasspostcodes/firstclasspostcodes-js/releases) releases page, for example `v1.5.1`.
+All JS library versions are available on the [@firstclasspostcodes/js](https://github.com/firstclasspostcodes/firstclasspostcodes-js/releases) releases page.
 
 ### Security
 Where the libary is loaded on pages including sensitive information, we recommend using the [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) security feature. 
@@ -36,13 +34,13 @@ Where the libary is loaded on pages including sensitive information, we recommen
 Every version of the library is accompanied by an SRI hash file, the hash can be accessed directly using:
 
 ```sh
-$ curl https://js.firstclasspostcodes.com/plugin/VERSION.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
+$ curl https://js.firstclasspostcodes.com/plugin/__VERSION__.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
 ```
 
 You can then update the above `<script>` tag, adding the integrity attribute:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/plugin/VERSION.js"
+<script src="https://js.firstclasspostcodes.com/plugin/__VERSION__.js"
         integrity="sha256-45tfd... sha384-43567ytr..."
         crossorigin="anonymous"></script>
 ```
