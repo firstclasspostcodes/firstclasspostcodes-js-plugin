@@ -55,23 +55,23 @@ You need to configure the plugin to use your API Key which is available on your 
 <form>
   <div>
     <label for="address-line-1">Address Line 1</label>
-    <input name="address-line-1" type="text" />
+    <input name="address-line-1" type="text" data-address-line1 />
   </div>
   <div>
     <label for="address-line-2">Address Line 2</label>
-    <input name="address-line-2" type="text" />
+    <input name="address-line-2" type="text" data-address-line2 />
   </div>
   <div>
     <label for="county">County</label>
-    <input name="county" type="text" />
+    <input name="county" type="text" data-address-locality />
   </div>
   <div>
     <label for="city">City</label>
-    <input name="city" type="text" />
+    <input name="city" type="text" data-address-county />
   </div>
   <div>
     <label for="postcode">Postcode</label>
-    <input name="postcode" type="text" />
+    <input name="postcode" type="text" data-address-postcode />
   </div>
 </form>
 
@@ -79,14 +79,7 @@ You need to configure the plugin to use your API Key which is available on your 
   FirstclasspostcodesPlugin(
     document.getElementById('postcode-lookup-form'), 
     {
-      apiKey: '111111111111', 
-      addressTargets: {
-        addressLine1: '#address-line-1',
-        addressLine2: '#address-line-2',
-        locality: '#city',
-        county: '#county',
-        postcode: '#postcode',
-      },
+      apiKey: '111111111111',
     },
   );  
 </script>

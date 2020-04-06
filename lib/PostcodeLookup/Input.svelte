@@ -9,10 +9,10 @@
 </script>
 
 <div data-testid="container" class={classNames.container}>
-  <label class={classNames.label} for="postcode-lookup">
+  <label class={classNames.label} for="postcode-lookup-input">
     Postcode Lookup
   </label>
-  <input id="postcode-lookup" bind:value={value} class={classNames.text} placeholder="Enter your postcode" type="text" />
+  <input id="postcode-lookup-input" bind:value={value} class={classNames.text} placeholder="Enter your postcode" type="text" />
   <button class={classNames.button} on:click|stopPropagation|preventDefault={handleClick} type="submit">
     Lookup
   </button>

@@ -11,7 +11,12 @@
 
 	export let style = {};
 
-	export let addressTargets = {};
+	export let addressTargets = {
+		addressLine1: '[data-address-line1]',
+		locality: '[data-address-locality]',
+		county: '[data-address-county]',
+		postcode: '[data-address-postcode]',
+	};
 
 	const dispatch = createEventDispatcher();
 
