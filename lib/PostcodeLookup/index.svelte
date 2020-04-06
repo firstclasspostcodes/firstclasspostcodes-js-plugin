@@ -7,7 +7,7 @@
   
   export let getClient;
 
-  const { selectTarget } = getContext('style');
+  const { selectTarget, classNames = {} } = getContext('style') || {};
 
   const dispatch = createEventDispatcher();
 
@@ -25,20 +25,20 @@
     }
   }
 
-	const handleSelected = (e) => {
-    address = response.formatAddress(e.target.value);
+	const handleSelected = (value) => {
+    address = response.formatAddress(value);
     dispatch('address', address);
 	};
 
-  const getAddresses = async (input) => {
-		response = await getClient().getPostcode(input);
+  const handleLookup = async (value) => {
+		response = await getClient().getPostcode(value);
     
     if (target) {
       unmountSelectComponent();
       selectComponent = new Select({
         target,
         props: {
-          onChange: handleSelected,
+          onSelected: handleSelected,
           addresses: response.listAddresses(),
         },
       });
@@ -48,8 +48,8 @@
   onDestroy(() => unmountSelectComponent());
 </script>
 
-<Input onSubmit={getAddresses} />
+<Input classNames={classNames.input} onLookup={handleLookup} />
 
 {#if !target && response}
-  <Select onChange={handleSelected} addresses={response.listAddresses()} />
+  <Select classNames={classNames.select} onSelected={handleSelected} addresses={response.listAddresses()} />
 {/if}

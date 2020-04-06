@@ -1,19 +1,19 @@
 <script>
-  import { getContext } from 'svelte';
-
-  export let onSubmit = () => null;
-
   export let value = '';
 
-  const { classNames: { input = {} } = {} } = getContext('style');
+  export let classNames = {};
+
+  export let onLookup = () => null;
+
+  const handleClick = () => onLookup(value);
 </script>
 
-<div class={input.container}>
-  <label class={input.label} for="postcode-lookup">
+<div data-testid="container" class={classNames.container}>
+  <label class={classNames.label} for="postcode-lookup">
     Postcode Lookup
   </label>
-  <input id="postcode-lookup"  bind:value={value}  class={input.text} placeholder="Enter your postcode"  type="text" />
-  <button class={input.button} on:click|stopPropagation|preventDefault={() => onSubmit(value)} type="submit">
+  <input id="postcode-lookup" bind:value={value} class={classNames.text} placeholder="Enter your postcode" type="text" />
+  <button class={classNames.button} on:click|stopPropagation|preventDefault={handleClick} type="submit">
     Lookup
   </button>
 </div> 

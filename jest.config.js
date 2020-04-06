@@ -1,8 +1,11 @@
 module.exports = {
   transform: {
     '\\.js$': 'babel-jest',
-    '\\.svelte$': 'svelte-jest'
+    '\\.svelte$': 'svelte-jester',
   },
+  setupFilesAfterEnv: [
+    './jest.setup.js',
+  ],
   moduleFileExtensions: [
     'js',
     'json',

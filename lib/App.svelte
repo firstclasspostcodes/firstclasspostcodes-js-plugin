@@ -20,7 +20,6 @@
 	const { classNames: { root = {} } = {} } = style;
 
 	const handleAddress = ({ detail }) => {
-		console.log(detail);
 		dispatch('address', detail);
 		assignValueToTarget(addressTargets.addressLine1, detail.address);
 		assignValueToTarget(addressTargets.locality, detail.locality);

@@ -1,18 +1,18 @@
 <script>
-  import { getContext } from 'svelte';
+  export let addresses;
 
-  export let addresses = [];
+  export let classNames = {};
 
-  export let onChange = () => null;
+  export let onSelected = () => null;
 
-  const { classNames: { select = {} } = {} } = getContext('style');
+  const onChange = (e) => onSelected(e.target.value);
 </script>
 
-<div class={select.container}>
-  <label class={select.label} for="select-address">Select your address</label>
-  <select class={select.select} on:change={onChange} id="select-address">
-    {#if addresses.length > 0}
-      <option disabled>Choose address...</option>
+<div data-testid="container" class={classNames.container}>
+  <label class={classNames.label} for="select-address">Select your address</label>
+  <select class={classNames.select} on:change|stopPropagation|preventDefault={onChange} id="select-address">
+    {#if addresses && addresses.length > 0}
+      <option selected disabled>Choose address...</option>
       {#each addresses as [value, text]}
         <option value={value}>{text}</option>
       {/each}
