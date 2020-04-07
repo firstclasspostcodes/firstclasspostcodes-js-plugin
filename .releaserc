@@ -8,8 +8,8 @@
         "replacements": [
           {
             "files": ["README.md"],
-            "from": "__VERSION__",
-            "to": "${nextRelease.version}",
+            "from": "plugin/v[\\.0-9]+",
+            "to": "plugin/${nextRelease.gitTag}",
             "results": [
               {
                 "file": "README.md",
