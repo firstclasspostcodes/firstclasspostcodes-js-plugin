@@ -34,6 +34,7 @@ jobs:
           browser: chrome
           start: npm start
       - name: Semantic Release
+        id: semantic
         uses: cycjimmy/semantic-release-action@v2
         with:
           branch: master
