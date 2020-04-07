@@ -26,7 +26,8 @@
     [
       "@semantic-release/git",
       {
-        "assets": ["foo/*.py"]
+        "assets": ["README.md"],
+        "message": "chore: Updated README.md version ${nextRelease.version} [skip ci]"
       }
     ],
     "@semantic-release/npm",
