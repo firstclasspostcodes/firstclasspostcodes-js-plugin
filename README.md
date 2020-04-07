@@ -3,7 +3,7 @@
 # Firstclasspostcodes
 ![Build, test and release](https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin/workflows/Build,%20test%20and%20release/badge.svg)
 
-Our browser plugin is compatible with all modern browsers and IE 11+ _(polyfills required)_.
+Our browser plugin is compatible with all modern browsers and IE9+ _(polyfills required)_.
 
 This simple to use plugin helps you to get started quickly, allowing you to add postcode lookup to any address form in minutes. 
 
@@ -20,7 +20,7 @@ Add the plugin directly into your HTML with:
 **Note on older browsers:** You will need to use a polyfill service, the following example covers all of the required language features:
 
 ```html
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2Cfetch%2CObject.assign%2Cdefault"></script>
 ```
 
 ### Add the client library
