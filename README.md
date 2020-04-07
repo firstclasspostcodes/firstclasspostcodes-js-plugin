@@ -1,4 +1,8 @@
+[//]: # "Comment"
+
 # Firstclasspostcodes
+![Build, test and release](https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin/workflows/Build,%20test%20and%20release/badge.svg)
+
 Our browser plugin is compatible with all modern browsers and IE 11+ _(polyfills required)_.
 
 This simple to use plugin helps you to get started quickly, allowing you to add postcode lookup to any address form in minutes. 
