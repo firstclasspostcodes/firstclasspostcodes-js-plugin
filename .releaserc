@@ -9,7 +9,7 @@
           {
             "files": ["README.md"],
             "from": "plugin/v[\\.0-9]+",
-            "to": "plugin/${nextRelease.gitTag}",
+            "to": "plugin/${nextRelease.gitTag}.",
             "results": [
               {
                 "file": "README.md",
