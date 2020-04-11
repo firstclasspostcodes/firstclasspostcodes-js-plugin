@@ -33,6 +33,11 @@ jobs:
         with:
           browser: chrome
           start: npm start
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: Cypress Artifacts
+          path: cypress/videos
       - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v2
