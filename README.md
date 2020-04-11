@@ -1,4 +1,4 @@
-[//]: # "Comment"
+[//]: # "NOTE: The URL for the JS library is automatically updated by semantic-release."
 
 # Firstclasspostcodes
 ![Build, test and release](https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin/workflows/Build,%20test%20and%20release/badge.svg)
