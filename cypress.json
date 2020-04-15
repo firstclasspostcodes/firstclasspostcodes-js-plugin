@@ -3,5 +3,8 @@
   "pluginsFile": false,
   "supportFile": false,
   "integrationFolder": "lib/",
-  "testFiles": ["**/*.integration.js"]
+  "testFiles": [
+    "**/*.integration.js"
+  ],
+  "projectId": "hu4kvr"
 }

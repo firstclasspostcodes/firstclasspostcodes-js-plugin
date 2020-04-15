@@ -21,6 +21,7 @@
 	const dispatch = createEventDispatcher();
 
 	setContext('style', style);
+	setContext('client', () => getClient(apiKey, apiOverrides));
 
 	const { classNames: { root = {} } = {} } = style;
 
@@ -34,5 +35,5 @@
 </script>
 
 <div class={root.container}>
-	<PostcodeLookup on:address={handleAddress} getClient={() => getClient(apiKey, apiOverrides)} />
+	<PostcodeLookup on:address={handleAddress} />
 </div>

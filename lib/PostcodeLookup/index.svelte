@@ -5,9 +5,9 @@
   import Input from './Input.svelte';
   import Select from './Select.svelte';
   
-  export let getClient;
-
   const { selectTarget, classNames = {} } = getContext('style') || {};
+
+  const getClient = getContext('client');
 
   const dispatch = createEventDispatcher();
 
