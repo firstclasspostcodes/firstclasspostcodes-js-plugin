@@ -1,7 +1,7 @@
 [//]: # "NOTE: The URL for the JS library is automatically updated by semantic-release."
 
 # Firstclasspostcodes
-![Build, test and release](https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin/workflows/Build,%20test%20and%20release/badge.svg)
+![Build, test and release](https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin/workflows/Build,%20test%20and%20release/badge.svg) [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/hu4kvr/runs)
 
 Our browser plugin is compatible with all modern browsers and IE9+ _(polyfills required)_.
 
