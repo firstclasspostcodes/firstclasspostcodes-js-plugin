@@ -7,7 +7,7 @@
 
   export let onLookup = () => null;
 
-  const getClient = getContext('client');
+  export let getClient = getContext('client');
 
   let response;
 
@@ -19,6 +19,7 @@
     if (!value || value.length < 2) {
       return false;
     }
+
     response = await getClient().getAutocomplete(value);
 
     if (!response.isCompleted) {

@@ -1,9 +1,10 @@
 {
-  "name": "@firstclasspostcodes/plugin",
+  "name": "@firstclasspostcodes/svelte",
   "description": "",
   "homepage": "https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin",
   "author": "Firstclasspostcodes <support@firstclasspostcodes.com> (https://firstclasspostcodes.com/)",
   "keywords": [
+    "svelte",
     "postcodes",
     "postcode lookup",
     "firstclasspostcodes",

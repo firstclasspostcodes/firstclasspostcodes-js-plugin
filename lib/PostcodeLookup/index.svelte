@@ -7,13 +7,13 @@
   
   const { selectTarget, classNames = {} } = getContext('style') || {};
 
-  const getClient = getContext('client');
-
   const dispatch = createEventDispatcher();
 
-	let address = null;
+  export let getClient = getContext('client');
 
-	let response = null;
+	export let response = null;
+	
+  let address = null;
 
   let selectComponent;
 
