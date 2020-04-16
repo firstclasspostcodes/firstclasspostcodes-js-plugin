@@ -61,11 +61,11 @@ jobs:
         if: steps.semantic.outputs.new_release_published == 'true'
         run: |
           sudo apt-get install -y rename
-          H256=sha256-`openssl dgst -sha256 -binary dist/index.js | openssl base64 -A`
-          H384=sha384-`openssl dgst -sha384 -binary dist/index.js | openssl base64 -A`
-          H512=sha512-`openssl dgst -sha512 -binary dist/index.js | openssl base64 -A`
-          echo "$H256 $H384 $H512" > dist/index.sri.txt
-          rename "s/index/v$SEMANTIC_VERSION/" dist/index.*
+          H256=sha256-`openssl dgst -sha256 -binary dist/browser.js | openssl base64 -A`
+          H384=sha384-`openssl dgst -sha384 -binary dist/browser.js | openssl base64 -A`
+          H512=sha512-`openssl dgst -sha512 -binary dist/browser.js | openssl base64 -A`
+          echo "$H256 $H384 $H512" > dist/browser.sri.txt
+          rename "s/browser/v$SEMANTIC_VERSION/" dist/browser.*
           aws s3 cp dist/ $AWS_S3_PATH --recursive --cache-control "max-age=31536000"
         env:
           SEMANTIC_VERSION: ${{steps.semantic.outputs.new_release_version}}

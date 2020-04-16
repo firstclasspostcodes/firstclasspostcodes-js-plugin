@@ -51,35 +51,35 @@
     
     <script crossorigin="anonymous" src="https://js.firstclasspostcodes.com/v1.6.2.js"></script>
     <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="./lib/index.js"></script>
-    <!-- <script>
-      const plugin = FirstclasspostcodesPlugin(
-        document.getElementById('postcode-lookup-form'), 
-        {
-          apiKey: '111111111111', 
-          apiOverrides: {
-            endpoint: 'http://localhost:2345',
-          },
-          style: {
-            selectTarget: '#postcode-results',
-            classNames: {
-              input: {
-                container: 'form-inline form-group',
-                label: 'sr-only',
-                text: 'form-control mr-sm-2',
-                button: 'btn btn-primary',
-              },
-              select: {
-                container: 'form-group',
-                label: '',
-                select: 'custom-select',
+    <script src="./lib/browser.js"></script>
+    <script>
+      const initPlugin = () => {
+        FirstclasspostcodesPlugin(
+          document.getElementById('postcode-lookup-form'),
+          {
+            apiKey: '111111111111',
+            apiOverrides: {
+              endpoint: 'http://localhost:2345',
+            },
+            style: {
+              selectTarget: '#postcode-results',
+              classNames: {
+                input: {
+                  container: 'form-inline form-group',
+                  label: 'sr-only',
+                  text: 'form-control mr-sm-2',
+                  button: 'btn btn-primary',
+                },
+                select: {
+                  container: 'form-group',
+                  label: '',
+                  select: 'custom-select',
+                },
               },
             },
           },
-        },
-      );
-
-      plugin.$on('address', (obj) => console.log('address', obj));
-    </script> -->
+        );
+      };
+    </script>
   </body>
 </html>

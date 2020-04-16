@@ -1,13 +1,23 @@
 # development folders
+.cache
 .dependabot
 .github
 lib
 
+# testing folders
+cypress
+coverage
+
 # development files
-index.html
+/*.html
+/jest.*
 commitlint.config.js
 cypress.json
 cypress.env.json
 .huskyrc.json
 .gitignore
+.release*
+.babel*
+.browsers*
 .eslint*
+README.md
