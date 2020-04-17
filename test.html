@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Firstclasspostcodes Plugin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2Cfetch%2CObject.assign%2Cdefault"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Delivery Address</h1>
+      <form id="address-form">
+        <div class="form-group">
+          <div id="postcode-lookup-form" class="container row"></div>
+          <small id="postcodeLookupHelp" class="form-text text-muted">
+            Enter your postcode to automatically find your address.
+          </small>
+        </div>
+
+        <div id="postcode-results"></div>
+      
+        <div class="form-group">
+          <label for="address-line-1">Address Line 1</label>
+          <input name="address-line-1" type="text" class="form-control" data-address-line1>
+        </div>
+      
+        <div class="form-group">
+          <label for="address-line-2">Address Line 2</label>
+          <input name="address-line-2" type="text" class="form-control" data-address-line2>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input name="city" type="text" class="form-control" data-address-locality>
+        </div>
+      
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="county">County</label>
+              <input name="county" type="text" class="form-control" data-address-county>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="postcode">Postcode</label>
+              <input name="postcode" type="text" class="form-control" data-address-postcode>
+            </div>
+          </div>
+      </form>
+    </div>
+    
+    <script crossorigin="anonymous" src="https://js.firstclasspostcodes.com/v1.5.1.js"></script>
+    <script crossorigin="anonymous" src="/dist/index.js"></script>
+    <script>
+      FirstclasspostcodesPlugin(
+        document.getElementById('postcode-lookup-form'), 
+        {
+          apiKey: '111111111111', 
+          apiOverrides: {
+            endpoint: 'http://localhost:2345',
+          },
+          style: {
+            selectTarget: '#postcode-results',
+            classNames: {
+              input: {
+                container: 'form-inline form-group',
+                label: 'sr-only',
+                text: 'form-control mr-sm-2',
+                button: 'btn btn-primary',
+              },
+              select: {
+                container: 'form-group',
+                label: '',
+                select: 'custom-select',
+              },
+            },
+          },
+        }
+      );
+    </script>
+  </body>
+</html>

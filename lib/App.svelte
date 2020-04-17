@@ -3,7 +3,7 @@
 
 	import { getClient } from './client';
 	import { assignValueToTarget } from './targets';
-	import PostcodeLookup from './PostcodeLookup';
+	import PostcodeLookup from './PostcodeLookup/index.svelte';
 
 	export let apiKey;
 

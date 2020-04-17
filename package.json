@@ -1,6 +1,6 @@
 {
   "name": "@firstclasspostcodes/svelte",
-  "description": "",
+  "description": "Firstclasspostcodes component library for the Svelte framework",
   "homepage": "https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin",
   "author": "Firstclasspostcodes <support@firstclasspostcodes.com> (https://firstclasspostcodes.com/)",
   "keywords": [
@@ -11,17 +11,19 @@
     "api"
   ],
   "version": "0.0.0",
+  "svelte": "lib/index.js",
+  "module": "dist/index.mjs",
   "main": "dist/index.js",
   "browser": "dist/browser.js",
   "scripts": {
     "commit": "npx git-cz",
     "build": "parcel build lib/browser.js --target browser",
-    "postbuild": "parcel build lib/index.js --target main",
+    "postbuild": "rollup -c",
     "lint": "eslint . --ext .js --ext .svelte --ignore-path .gitignore",
     "test": "NODE_ENV=test jest --coverage",
     "cypress": "cypress run --headless",
     "start": "parcel index.html",
-    "postinstall": "cp .browserslistrc.svelte node_modules/svelte/.browserslistrc"
+    "postinstall": "cp .browserslistrc.svelte node_modules/svelte/.browserslistrc 2>/dev/null || :"
   },
   "targets": {
     "browser": {
@@ -48,6 +50,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.3.4",
     "@google/semantic-release-replace-plugin": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
     "@semantic-release/git": "^9.0.0",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/svelte": "^3.0.0",
@@ -63,6 +66,8 @@
     "jest-axe": "^3.4.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.6",
+    "rollup": "^2.6.1",
+    "rollup-plugin-svelte": "^5.2.1",
     "svelte": "^3.20.1",
     "svelte-jester": "^1.0.5"
   },

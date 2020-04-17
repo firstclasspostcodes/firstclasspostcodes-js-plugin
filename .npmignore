@@ -2,7 +2,6 @@
 .cache
 .dependabot
 .github
-lib
 
 # testing folders
 cypress
