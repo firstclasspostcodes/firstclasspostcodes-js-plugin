@@ -7,6 +7,8 @@ Our browser plugin is compatible with all modern browsers and IE9+ _(polyfills r
 
 This simple to use plugin helps you to get started quickly, allowing you to add postcode lookup to any address form in minutes. 
 
+> **Note:** Are you looking for the [Svelte](https://svelte.dev) documentation? [See here](/NPM.md)
+
 ## Documentation
 See [@firstclasspostcodes/plugin](https://docs.firstclasspostcodes.com/js/plugin) for detailed usage, guides and examples.
 

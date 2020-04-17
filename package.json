@@ -23,7 +23,9 @@
     "test": "NODE_ENV=test jest --coverage",
     "cypress": "cypress run --headless",
     "start": "parcel index.html",
-    "postinstall": "cp .browserslistrc.svelte node_modules/svelte/.browserslistrc 2>/dev/null || :"
+    "postinstall": "cp .browserslistrc.svelte node_modules/svelte/.browserslistrc 2>/dev/null || :",
+    "prepublishOnly": "mv README.md BROWSER.md && mv NPM.md README.md",
+    "postpublish": "mv README.md NPM.md && mv BROWSER.md README.md"
   },
   "targets": {
     "browser": {
