@@ -41,7 +41,7 @@
   <label class={classNames.label} for="postcode-lookup-input">
     Postcode Lookup
   </label>
-  <input id="postcode-lookup-input" list="autocomplete" bind:value={value} class={classNames.text} placeholder="Enter your postcode" type="text" />
+  <input id="postcode-lookup-input" list="autocomplete" bind:value={value} class={classNames.input} placeholder="Enter your postcode" type="text" />
   {#if completions && completions.length > 0}
   <datalist id="autocomplete">
     {#each completions as completion}
