@@ -16,7 +16,7 @@ See [@firstclasspostcodes/plugin](https://docs.firstclasspostcodes.com/js/plugin
 Add the plugin directly into your HTML with:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/plugin/v2.3.0.js"></script>
+<script src="https://js.firstclasspostcodes.com/plugin/v2.3.1.js"></script>
 ```
 
 **Note on older browsers:** You will need to use a polyfill service, the following example covers all of the required language features:
@@ -40,13 +40,13 @@ Where the libary is loaded on pages including sensitive information, we recommen
 Every version of the library is accompanied by an SRI hash file, the hash can be accessed directly using:
 
 ```sh
-$ curl https://js.firstclasspostcodes.com/plugin/v2.3.0.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
+$ curl https://js.firstclasspostcodes.com/plugin/v2.3.1.sri.txt # => "sha256-45tfd... sha384-43567ytr..."
 ```
 
 You can then update the above `<script>` tag, adding the integrity attribute:
 
 ```html
-<script src="https://js.firstclasspostcodes.com/plugin/v2.3.0.js"
+<script src="https://js.firstclasspostcodes.com/plugin/v2.3.1.js"
         integrity="sha256-45tfd... sha384-43567ytr..."
         crossorigin="anonymous"></script>
 ```
