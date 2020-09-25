@@ -70,7 +70,7 @@
     "parcel-plugin-svelte": "^4.0.6",
     "rollup": "^2.28.2",
     "rollup-plugin-svelte": "^6.0.1",
-    "svelte": "^3.25.1",
+    "svelte": "^3.27.0",
     "svelte-jester": "^1.1.5"
   },
   "dependencies": {}
