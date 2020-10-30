@@ -64,7 +64,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-svelte3": "^2.7.3",
     "git-cz": "^4.7.1",
-    "jest": "^26.6.0",
+    "jest": "^26.6.1",
     "jest-axe": "^4.0.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.6",
