@@ -47,7 +47,7 @@
     "url": "https://github.com/firstclasspostcodes/firstclasspostcodes-js-plugin/issues"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
+    "@babel/core": "^7.12.17",
     "@babel/preset-env": "^7.12.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-angular": "^11.0.0",
